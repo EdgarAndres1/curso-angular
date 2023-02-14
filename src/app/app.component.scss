@@ -75,9 +75,9 @@ header {
     
 
 }
-.search:hover {
+.search:focus {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--grey600);
+    color: white;
     font-weight: 400px;
     font-size: 14px;
     line-height: 16px;
