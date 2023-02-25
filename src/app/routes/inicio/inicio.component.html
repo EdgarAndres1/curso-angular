@@ -1,1 +1,10 @@
-<p>inicio works!</p>
+<div class="card cl-md-3 col-12" *ngFor="let movie of movies_series" >
+    <div 
+        class="star d-flex justify-content-center align-items-center qualification"
+              >
+              <i class="far fa-star mr-1">
+                <img class="Estar" src="{{movie.image}}" alt=""></i>7.9
+    </div>
+          <img class="portada" src="/assets/4-how-i-met-your-mother.svg" alt="portada">
+            <p class="title-card link-regular">{{movie.name}}</p>
+
