@@ -1,10 +1,79 @@
-<div class="card cl-md-3 col-12" *ngFor="let movie of movies_series" >
-    <div 
-        class="star d-flex justify-content-center align-items-center qualification"
-              >
-              <i class="far fa-star mr-1">
-                <img class="Estar" src="{{movie.image}}" alt=""></i>7.9
+<header class="fixed-top">
+  <div class="container d-flex aling-items-center justify-content-between">
+      <a routerLink="home"  >
+          <img class="logo" src="./../assets/icon.svg" alt="logo-pelisup!">
+      </a>
+      <ul class="main">
+          <li class="link item-main">
+              <a routerLink="inicio">Inicio</a>
+          </li>
+
+          <li class="link item-main">
+              <a routerLink="peliculas">Peliculas</a>
+          </li>
+          <li class="link item-main">
+              <a routerLink="series">Series</a>               
+
+          </li>
+          <li class="link item-main">
+              <a routerLink="ingresar">Ingresar
+              </a>
+          </li>  
+      </ul>
+  </div>  
+</header>
+
+<section class="container pt-70">
+      <h1 class="title">PelisUp! </h1>
+      <p class="body-regular description">
+        Plataforma para ver peliculas y series
+      </p>
+      <form class="formulario d-flex" role="search">
+        <input type="text" placeholder="Buscar peliculas o series" aria-label="buscar" 
+        class="form-control"
+        [(ngModel)]="parabuscar"
+        (ngModelChange)="buscar(parabuscar)" >      
+        
+      </form>   
+
+      <!-- <input class="form-control me-2" type="text"  aria-label="search" [{ngModel}]="parabuscar" (ngModelchange)= "buscar(parabuscar)"/> -->
+
+           
+      <div class="d-grid gap-2 d-md-block">
+          <button type="button" class="btn btn-primary" (click)="Change('Todos')"[ngClass]="selected =='Todos'?'button-selected':'button-noselected'">Todos</button>
+          <button type="button" class="btn btn-primary" (click)="Change('Peliculas')"[ngClass]="selected =='Peliculas'?'button-selected':'button-noselected'">Peliculas</button>
+          <button type="button" class="btn btn-primary" (click)="Change('Series')"[ngClass]="selected =='Series'?'button-selected':'button-noselected'">Series</button>
+        </div> 
+  <h3 class="all d-block">Todos <small class="body-regular"> (120)</small></h3>
+
+</section>
+
+
+<div class="container">
+  <div class=" d-flex justify-content-center align-items-start flex-wrap">
+    <div class="card col-md-3 col-12" *ngFor="let movie of movies_series">
+      <div class="row" *ngIf="selected == movie.category || selected == 'Todos' ">
+        <div 
+        class="star d-flex justify-content-center align-items-center qualification " 
+        >
+        <i class="far fa-star mr-1">
+        <img class="Estar" src="/assets/icons8-estrella-26 (1).png" alt="">
+        </i>8.5
+        
     </div>
-          <img class="portada" src="/assets/4-how-i-met-your-mother.svg" alt="portada">
-            <p class="title-card link-regular">{{movie.name}}</p>
+        <img class="portada" src="{{movie.image}}" alt="portada">
+          <p class="title-card link-regular">{{movie.name}}</p>
+      </div>
+        
+  
+    </div>
+        
+  </div>       
+  
+
+</div>
+
+
+              
+
 
