@@ -1,89 +1,56 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/service/movies.service';
 import { movieserie } from 'src/app/shared/interfaces/movieseries.interfaces';
+import { Trending } from 'src/app/shared/interfaces/Trending.interface';
+
+
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.scss']
+  styleUrls: ['./inicio.component.scss'],
+  providers : [MoviesService]
 })
+
 export class InicioComponent {
 
-movies_series:movieserie[] = [
-  {
-    id : 1,
-  name: "Money Heist",
-  description : "Accion",
-  image : "/assets/5-money-heist.svg",
-  rating :0,
-  category : "Peliculas"
-},
-{
-  id : 2,
-name: "Friends",
-description : "Humor",
-image : "/assets/6-friends.svg",
-rating :0,
-category : "Series"
-},
-{
-  id : 3,
-name: "The Big Bang Theory",
-description : "Humor",
-image : "/assets/7-the-big-bang-theory.svg",
-rating :0,
-category : "Series"
-},
-{
-  id : 4,
-name: "Two and a Half Men",
-description : "Humor",
-image : "/assets/8-two-and-a-half-men.svg",
-rating :0,
-category : "Series"
-},
-{
-  id : 5,
-name: "Black Widow",
-description : "Accion",
-image : "/assets/1-black-widow.svg",
-rating :0,
-category : "Peliculas"
-},
-{
-  id : 6,
-name: "Shang-Chi",
-description : "Accion",
-image : "/assets/2-shang-chi.svg",
-rating :0,
-category : "Peliculas"
-},
-{
-  id : 7,
-name: "Loki",
-description : "Accion ",
-image : "/assets/3-loki.svg",
-rating :0,
-category : "Peliculas"
-},
-{
-  id : 8,
-name: "How i met your mother",
-description : "Humor ",
-image : "/assets/4-how-i-met-your-mother.svg",
-rating :0,
-category : "Peliculas"
-}
-
-]
+movies_series:any = {};
 
  selected: string = 'Todos';
 
 parabuscar : string = '';
 
+constructor(
+  private _moviesService : MoviesService
+){
+  
+}
+
+ngOnInit(): void {
+  this.getTrendingAll();
+}
+getTrendingAll() {
+  this._moviesService.getTrending().subscribe({
+    next:(data) => {
+      this.movies_series = data;
+      for (const element of this.movies_series.results){
+        element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path;
+      }
+    },
+    error:(error)=> {
+      console.log(error);
+    } 
+  })
+}
   Change(value: string){
-    console.log("Viejo valor del selected", this.selected);
     this.selected = value;
-    console.log("Nuevo valor del selected", this.selected);
+    if (value == 'tv') {
+      // this.getTv();
+    } else if (value == 'movie') {
+      // this.getMovies();
+    } else {
+      // this.getTrendingAll();
+    } 
   }
   
 buscar(value:string) {

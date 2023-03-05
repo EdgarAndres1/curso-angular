@@ -24,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     PeliculasComponent,
     SeriesComponent,
-    IngresarComponent
+    IngresarComponent,
+    
   ]
 })
 export class RoutesModule { }
