@@ -1,9 +1,9 @@
 <header class="fixed-top">
-  <div class="container d-flex aling-items-center justify-content-between">
-      <a routerLink="home"  >
+  <div class="conteiner d-flex aling-items-center justify-content-between">
+      <a routerLink="home d-flex"  >
           <img class="logo" src="./../assets/icon.svg" alt="logo-pelisup!">
       </a>
-      <ul class="main">
+      <ul class="main d-flex">
           <li class="link item-main">
               <a routerLink="inicio">Inicio</a>
           </li>
@@ -31,7 +31,7 @@
       <form class="formulario d-flex" role="search">
         <input type="text" placeholder="Buscar peliculas o series" aria-label="buscar" 
         class="form-control"
-        [(ngModel)]="parabuscar"
+        [(ngModel)]="parabuscar"[ngModelOptions]="{standalone:true}"
         (ngModelChange)="buscar(parabuscar)" >      
         
       </form>   
@@ -51,7 +51,7 @@
 
 <div class="container">
   <div class=" d-flex justify-content-center align-items-start flex-wrap">
-    <div class="card col-md-3 col-12" *ngFor="let movie of movies_series">
+    <div class="card col-md-3 col-12" *ngFor="let movie of auxiliarmovies_series">
       <div class="row" *ngIf="selected == movie.category || selected == 'Todos' ">
         <div 
         class="star d-flex justify-content-center align-items-center qualification " 

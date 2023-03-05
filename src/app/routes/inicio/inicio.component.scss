@@ -1,13 +1,13 @@
 
 header {
     height: 120px;
-    padding-top: 10px;
-    background: #1e3c72;
-    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
+    padding-top: 10px;   
     background: linear-gradient(to right,#2a5298, #081835 );
     
 }
+
 .logo {
+   
     height: 50px;
     margin-left: 60px;
     margin-top: 25px;
@@ -16,7 +16,7 @@ header {
 .main {
     
     display: flex;
-    margin: 0  ; 
+    margin: -35px  ; 
     margin-right: 55px;   
     justify-content: end;
     font-size: 20px;
@@ -35,8 +35,6 @@ a {
 
 
 .container {
-    background: #1e3c72;
-    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
     background: linear-gradient(to right,#2a5298, #081835 );
 }
 
@@ -46,6 +44,7 @@ a {
     color: white;
     margin-left: 60px;
     font-size: 40px;
+    
 
 }
 .container p {
@@ -56,15 +55,10 @@ a {
 
 .title {
     margin-top: 0px;
-    color: var(--grey50);
+    color: rgb(129, 31, 31);
 
 }
-.description {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    color: var(--grey300);
 
-}
 .formulario {
     background-color: rgba(142, 105, 105, 0.2);
     border-radius: 10px;
