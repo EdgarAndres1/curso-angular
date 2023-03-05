@@ -6,8 +6,10 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent {
-  @Input() nombre : string = '';
+
   @Input() imagen : string = '';
+  @Input() nombre : string = '';
+ 
   
 
   constructor ()  {}

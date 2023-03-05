@@ -34,7 +34,7 @@ getTrendingAll() {
     next:(data) => {
       this.movies_series = data;
       for (const element of this.movies_series.results){
-        element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path;
+        element.poster_path = 'https://themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path;
       }
     },
     error:(error)=> {

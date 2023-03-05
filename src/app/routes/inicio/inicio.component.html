@@ -31,8 +31,8 @@
       <form class="formulario d-flex" role="search">
         <input type="text" placeholder="Buscar peliculas o series" aria-label="buscar" 
         class="form-control"
-        [(ngModel)]="parabuscar"[ngModelOptions]="{standalone:true}"
-        (ngModelChange)="buscar(parabuscar)" >      
+        [(ngModel)]="parabuscar" (ngModelChange)="buscar(parabuscar)"[ngModelOptions]="{standalone:true}"
+         >      
         
       </form>   
 
@@ -40,9 +40,9 @@
 
            
       <div class="d-grid gap-2 d-md-block">
-          <button type="button" class="btn btn-primary" (click)="Change('Todos')"[ngClass]="selected =='Todos'?'button-selected':'button-noselected'">Todos</button>
-          <button type="button" class="btn btn-primary" (click)="Change('movie')"[ngClass]="selected =='movie'?'button-selected':'button-noselected'">Peliculas</button>
-          <button type="button" class="btn btn-primary" (click)="Change('tv')"[ngClass]="selected =='tv'?'button-selected':'button-noselected'">Series</button>
+          <button type="button" class="btn btn-primary" (click)="Change('Todos')"[ngClass]="selected =='Todos'?'button-Selected':'button-noSelected'">Todos</button>
+          <button type="button" class="btn btn-primary" (click)="Change('movie')"[ngClass]="selected =='movie'?'button-Selected':'button-noSelected'">Peliculas</button>
+          <button type="button" class="btn btn-primary" (click)="Change('tv')"[ngClass]="selected =='tv'?'button-Selected':'button-noSelected'">Series</button>
         </div> 
   <h3 class="all d-block">Todos <small class="body-regular"> (120)</small></h3>
 
@@ -53,17 +53,7 @@
   <div class=" d-flex justify-content-center align-items-start flex-wrap">
     <div class="card col-md-3 col-12" *ngFor="let movie of movies_series.results">
       <div class="row" *ngIf="selected == movie.media_type || selected == 'Todos' ">
-        <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
-       
-      </div>
-<div class="card" *ngIf="selected == 'movie' ">
-  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
-</div>
-<div class="card" *ngIf="selected == 'tv' ">
-  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
-</div>
-
-        <!-- <div 
+         <div 
         class="star d-flex justify-content-center align-items-center qualification " 
         >
         <i class="far fa-star mr-1">
@@ -72,16 +62,33 @@
         
     </div>
         <img class="portada" src=  {{movie.poster_path}} alt="portada">
-          <p class="title-card link-regular">{{movie.title || movie.original_name}}</p> -->
+          <p class="title-card link-regular">{{movie.title || movie.original_name}}</p>
+        </div>
+
+       
       </div>
         
   
     </div>
         
+  </div>     
+        
+        
+        
+        
+        <!-- <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+       
+      </div>
+<div class="card" *ngIf="selected == 'movie' ">
+  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+</div>
+<div class="card" *ngIf="selected == 'tv' ">
+  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards> -->
+
          
   
 
-</div>
+
 
 
               

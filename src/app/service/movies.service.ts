@@ -20,7 +20,7 @@ return this._http.get < Trending >(this.base_url + '/trending/all/week', {
   params : {
     api_key: this.api_key,
     language: 'es-Es'
-  }
+  },
 })
 
   }
