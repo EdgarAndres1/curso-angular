@@ -12,7 +12,6 @@
         
       </form>   
 
-      <!-- <input class="form-control me-2" type="text"  aria-label="search" [{ngModel}]="parabuscar" (ngModelchange)= "buscar(parabuscar)"/> -->
 
            
       <div class="d-grid gap-2 d-md-block">
@@ -25,16 +24,14 @@
 </section>
 
 
-<div class="container">
-  <div class="  justify-content-center align-items-start flex-wrap">
-    <div class=" col-md-3 col-12" *ngFor="let movie of movies_series.results">
-      <div class="row" *ngIf="selected == movie.media_type || selected == 'Todos' ">
-          <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+<div class="conteiner-card d-flex">
+  <div class=" " *ngFor="let movie of movies_series.results">
+    <div class="" *ngIf="selected == movie.media_type || selected == 'Todos' ">
+        <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
 
-          
-      </div>
-    </div> 
- </div>
+        
+    </div>
+  </div> 
 </div>     
 
 

@@ -49,14 +49,14 @@
     border-radius: 12px;
     position: relative;
     color:  #EBEEF5;
-    transition: all 0.5s ease-out;
-    display: inline-block;
-     justify-content: space-between;   
+    transition: all 0.5s ease-out;      
     height: 480px;
     width: 282px;
     max-width: 282px ;
     max-height: 480px;
-    padding: 8px;
+    padding: 8px;    
+	Gap: 16px;
+	
 
 }
 .card-movie:hover {
@@ -66,6 +66,7 @@
 .portada {
     height: 400px;
     width: 266px;
+    border-radius: 5px;
 }
 .calificacion {
     position: absolute;
