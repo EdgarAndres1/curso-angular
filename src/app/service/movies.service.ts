@@ -9,7 +9,7 @@ export class MoviesService {
 
   api_key = '77d4bdd91e70e1c691bc265726ebb489';
 
-  base_url = 'http ://api.themoviedb.org/3';
+  base_url = 'http://api.themoviedb.org/3';
 
   constructor(
     private _http: HttpClient,

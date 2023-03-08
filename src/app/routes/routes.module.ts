@@ -6,6 +6,7 @@ import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   exports: [
     InicioComponent,

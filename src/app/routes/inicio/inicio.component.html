@@ -1,27 +1,3 @@
-<header class="fixed-top">
-  <div class="conteiner d-flex aling-items-center justify-content-between">
-      <a routerLink="home d-flex"  >
-          <img class="logo" src="./../assets/icon.svg" alt="logo-pelisup!">
-      </a>
-      <ul class="main d-flex">
-          <li class="link item-main">
-              <a routerLink="inicio">Inicio</a>
-          </li>
-
-          <li class="link item-main">
-              <a routerLink="peliculas">Peliculas</a>
-          </li>
-          <li class="link item-main">
-              <a routerLink="series">Series</a>               
-
-          </li>
-          <li class="link item-main">
-              <a routerLink="ingresar">Ingresar
-              </a>
-          </li>  
-      </ul>
-  </div>  
-</header>
 
 <section class="container pt-70">
       <h1 class="title">PelisUp! </h1>
@@ -50,47 +26,26 @@
 
 
 <div class="container">
-  <div class=" d-flex justify-content-center align-items-start flex-wrap">
-    <div class="card col-md-3 col-12" *ngFor="let movie of movies_series.results">
+  <div class="  justify-content-center align-items-start flex-wrap">
+    <div class=" col-md-3 col-12" *ngFor="let movie of movies_series.results">
       <div class="row" *ngIf="selected == movie.media_type || selected == 'Todos' ">
-         <div 
-        class="star d-flex justify-content-center align-items-center qualification " 
-        >
-        <i class="far fa-star mr-1">
-        <img class="Estar" src="/assets/icons8-estrella-26 (1).png" alt="">
-        </i>8.5
-        
-    </div>
-        <img class="portada" src=  {{movie.poster_path}} alt="portada">
-          <p class="title-card link-regular">{{movie.title || movie.original_name}}</p>
-        </div>
+          <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
 
-       
+          
       </div>
+    </div> 
+ </div>
+</div>     
+
+
+
+
+
+
         
   
-    </div>
+    
         
-  </div>     
-        
-        
-        
-        
-        <!-- <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
-       
-      </div>
-<div class="card" *ngIf="selected == 'movie' ">
-  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
-</div>
-<div class="card" *ngIf="selected == 'tv' ">
-  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards> -->
-
          
-  
-
-
-
-
-              
 
 
