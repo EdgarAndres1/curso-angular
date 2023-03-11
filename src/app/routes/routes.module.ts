@@ -5,7 +5,7 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { SeriesComponent } from './series/series.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 
@@ -20,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   exports: [
     InicioComponent,

@@ -94,14 +94,33 @@ section h3 {
 section h3 {
     color: #a9a2a2;
 }
-.conteiner-card {
-    background: #1e3c72;
-    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
-    background: linear-gradient(to right,#2a5298, #081835 );
-    display: flex;
-    
-    
+.wrapperCards .container {
+	Display: Flex;
+	Gap: 16px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	}
+
+
+.card {
+	background-color: #323B54;
+	width: 100%;
 }
+
+// .wrapper-Cards .container {
+//     background: #1e3c72;
+//     background: -webkit-linear-gradient(to right, #2a5298, #091d42);
+//     background: linear-gradient(to right,#2a5298, #081835 );
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: flex-start;
+    
+    
+// }
+// .card {
+//     width: 100%;
+
+
 
 
 

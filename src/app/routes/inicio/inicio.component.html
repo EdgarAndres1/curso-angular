@@ -22,19 +22,78 @@
   <h3 class="all d-block">Todos <small class="body-regular"> (120)</small></h3>
 
 </section>
+<section class="wrapperCards">
+  <div class="container">
+      <div class="row">
+          <div class="col-4" *ngFor="let movie of movies_series.results">
+              <div class="card" *ngIf="selected == movie.media_type || selected == 'Todos' ">
+                  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+              </div>
+              <div class="card" *ngIf="selected == 'movie' ">
+                  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+              </div>
+              <div class="card" *ngIf="selected == 'tv' ">
+                  <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+              </div>
+          </div>
+      
+      </div>
+  
+  </div>
+</section>
 
 
-<div class="conteiner-card d-flex">
-  <div class=" " *ngFor="let movie of movies_series.results">
-    <div class="" *ngIf="selected == movie.media_type || selected == 'Todos' ">
-        <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
 
-        
+
+
+
+
+
+ <!-- <section class="wrapper-Cards">
+  <div class="container ">
+    <div class="row">
+      <div class="col-4" *ngFor="let movie of movies_series.results">
+        <div class="" *ngIf="selected == movie.media_type || selected == 'Todos' ">
+                     
+             
+            <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+    
+            
+        </div>
+      </div> 
+  
     </div>
-  </div> 
-</div>     
+    
+  </div>  
 
+</section>  -->
+<!-- 
+<div class="container">
+  <div class="d-flex justify-content-center align-items-star flex-wrap">            
+        <div class="col-md-3 col-12" *ngFor="let movie of movies_series.results">
+          <div class="row" *ngIf="selected == 'Todos' ">
+            <div class="star d-flex justify-content-center align-items-center qualification">
+              <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
 
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+<div class="container-card">
+  <div class="d-flex justify-content-center align-items-star flex-wrap">            
+        <div class="col-md-3 col-12" *ngFor="let movie of movies_series.results">
+          <div class="row" *ngIf="selected == 'tv' ">
+            <div class="star d-flex justify-content-center align-items-center qualification">
+              <app-cards [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+
+            </div>
+          </div>
+        </div>
+  </div>
+</div> -->
+
+ 
 
 
 

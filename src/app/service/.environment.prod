@@ -1,0 +1,12 @@
+export const environment = {
+    production: false,
+    firebaseConfig = {
+    apiKey: "AIzaSyCLNQwqcOvRzDxn5zrWdZ4QZtd-8gtJYbY",
+    authDomain: "pelisup-bad13.firebaseapp.com",
+    projectId: "pelisup-bad13",
+    storageBucket: "pelisup-bad13.appspot.com",
+    messagingSenderId: "962261302370",
+    appId: "1:962261302370:web:1aef6d82d0c9cc4ecfa53b",
+    measurementId: "G-H8LX7VER6N"
+}
+};
