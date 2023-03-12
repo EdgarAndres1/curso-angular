@@ -9,19 +9,83 @@
     display: flex;
     
 }
+.Inicio {
+    font-size: 44px;
+    margin-left: 55px;
+    color: aliceblue;
+}
+
 .container {
-    background: #1e3c72;
-    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
-    background: linear-gradient(to right,#2a5298, #081835 );
+    background: #071329;
+    background: -webkit-linear-gradient(to right, #132544, #091d42);
+    background: linear-gradient(to right,#162e56, #071225 );
+    margin-top: 50px;
+    border-radius: 25px;
+    width: 500px;
+}
+.image {
+    margin-top: 30px;
+    margin-right: 255px;
+    margin-left: 255px;
+}
+.form-control {
+    background-color: rgba(0,0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #323B54;
+    line-height: 1rem;
+    width: 200px;
+    padding: 12px 16px;
+    gap: 16px;
+    display: flex;
+    margin: 55px;
+}
+.btn-goo {
+    background: url(/assets/ingresar\ con\ google.png);
+    width: 290px;
+    border-radius: 12px;
+    height: 60px;
+    color: aliceblue;
+    height: 80px;
+    margin-left: 45px;
+ 
+
+}
+
+.btn-ingre {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 16px, 32px, ;
+    gap: 8px;
+    background-color: #7B6EF6;
+    align-items: center;
+    width: 250px;
+    border-radius: 12px;
+    color: aliceblue;
+    margin-left: 55px;
+    height: 45px;
+}
+.btn-regis {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    background-color: #1a2f6b;
+    width: 250px;
+    border-radius: 12px;
+    color: aliceblue;
+    margin-left: 55px;
+    height: 45px;
 }
 
 
-.login {
+// .login {
     
-    width: 50%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-}
+//     width: 50%;
+//     margin-top: 10%;
+//     margin-bottom: 10%;
+//     text-align: center;
+// }
 
    
