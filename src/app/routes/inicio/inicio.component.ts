@@ -43,14 +43,42 @@ getTrendingAll() {
     } 
   })
 }
+getTv() {
+  this._moviesService.getSeries().subscribe({
+    next:(data) => {
+      this.movies_series = data;
+      for (const element of this.movies_series.results){
+        element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path;
+      }
+      console.log(this.movies_series)
+    },
+    error:(error)=> {
+      console.log(error);
+    } 
+  })
+}
+getMovies() {
+  this._moviesService.getMovies().subscribe({
+    next:(data) => {
+      this.movies_series = data;
+      for (const element of this.movies_series.results){
+        element.poster_path = 'https://www.themoviedb.org/t/p/w220_and_h330_face/' + element.poster_path;
+      }
+      console.log(this.movies_series)
+    },
+    error:(error)=> {
+      console.log(error);
+    } 
+  })
+}
   Change(value: string){
     this.selected = value;
     if (value == 'tv') {
-      // this.getTv();
+      this.getTv();
     } else if (value == 'movie') {
-      // this.getMovies();
+       this.getMovies();
     } else {
-      // this.getTrendingAll();
+       this.getTrendingAll();
     } 
   }
   

@@ -12,6 +12,7 @@
     
 }
 
+
 .title {
     
     margin-left: 80px;
@@ -21,6 +22,12 @@
     height: 80px;
     width: 247px;
 
+}
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 
