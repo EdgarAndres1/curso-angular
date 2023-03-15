@@ -27,6 +27,14 @@ const routes: Routes = [
     path:"**",
     redirectTo:"inicio"
   }
+  {
+    path:"**",
+    redirectTo:"eliminaritem"
+  }
+  {
+    path:"**",
+    redirectTo:"agregarItem"
+  }
 ];
 
 @NgModule({
