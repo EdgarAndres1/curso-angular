@@ -4,7 +4,7 @@ import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { InicioComponent } from './routes/inicio/inicio.component';
 import { PeliculasComponent } from './routes/peliculas/peliculas.component';
 import { SeriesComponent } from './routes/series/series.component';
-import { DashboardComponent } from './routs/components/dashboard/dashboard.component';
+import { DashboardComponent } from './routes/components/dashboard/dashboard.component';
 import { AgregarItemComponent } from './routes/components/agregar-item/agregar-item.component';
 
 
