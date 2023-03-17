@@ -18,20 +18,32 @@
             <input 
                 class="form-control my-1" 
                 type="password" 
-                placeholder="Contraseña"
+                placeholder="Contrasena"
                 formControlName="contrasena"
             >
             <span class="form-text text-danger" *ngIf="campoEsValido('contrasena')">
                 Campo obligatorio
             </span>
             <br>
+            
+            
             <button  type="submit" class="btn-ingre btn-primary mt-3 mb-1">Ingresar</button>
+            <br>
+            <br>
+            <br>
+            <h1 style="color: green;" *ngIf="usuarioRegistrado == true">Ok</h1>
     
-            <hr>
+            
         </form>
         <button class="btn-goo btn-primary mt-3 mb-1"  (click)="ingresarConGoogle()"></button
             > 
-        <hr>
+            <br>
+            <br>
+            <br>
+            
+        
         <button class="btn-regis btn-primary mt-3 mb-1" (click)="register()"> No tienes cuenta? Registrate!</button>
+        <h1 style="color: red;" *ngIf="ocurrioError == true">error</h1>
+
     </div>
 </div>

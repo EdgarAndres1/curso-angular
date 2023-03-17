@@ -11,7 +11,6 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { FirestoreModule, getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { DashboardComponent } from './routs/components/dashboard/dashboard.component';
 
 
 
@@ -31,7 +30,7 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -42,9 +41,10 @@ const firebaseConfig = {
     SharedModule,
     HttpClientModule,
     AngularFireAuthModule,
+    FirestoreModule,
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
-    FirestoreModule,
+   
     
   
   ],

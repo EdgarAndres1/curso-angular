@@ -10,15 +10,16 @@ export class CardsComponent {
   @Input() imagen : string = '';
   @Input() nombre : string = '';
   @Input() conBoton : boolean  = false;
-  @Output () newItemEvent = new EventEmitter<string()>
-  @Input () 
+  @Input() id : number = 0;
+  @Output () newItemEvent = new EventEmitter<number>();
+  
 
   constructor ()  {}
 
     ngOnInit (): void {
   }
   addNewItem(value:string){
-    this.newItemEvent.emit(value);
+    this.newItemEvent.emit(this.id);
   }
 
 }

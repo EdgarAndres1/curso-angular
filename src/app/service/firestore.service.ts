@@ -16,10 +16,14 @@ import { Observable } from 'rxjs';
 })
 export class FirestoreService {
 
-  private moviesCollection: CollectionReference< DocumentData>
-  constructor( private firestore : Firestore) {
-    this.moviesCollection = collection(this.firestore, "movies")
+  private moviesCollection: CollectionReference< DocumentData>;
+
+  constructor( 
+    
+    private firestore : Firestore) {
+      this.moviesCollection = collection(this.firestore, 'movies');
    } 
+   
    create(movie:any){
     return addDoc(this.moviesCollection,movie)
    }
@@ -29,7 +33,7 @@ export class FirestoreService {
    }
 
    delete(id:number){
-    const moviesDocumentReference = doc(this.firestore, 'movies/${id}')
+    const moviesDocumentReference = doc(this.firestore, `movies/${id}`)
     
     return deleteDoc(moviesDocumentReference);
    }

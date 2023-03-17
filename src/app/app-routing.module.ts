@@ -4,36 +4,39 @@ import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { InicioComponent } from './routes/inicio/inicio.component';
 import { PeliculasComponent } from './routes/peliculas/peliculas.component';
 import { SeriesComponent } from './routes/series/series.component';
+import { DashboardComponent } from './routs/components/dashboard/dashboard.component';
+import { AgregarItemComponent } from './routes/components/agregar-item/agregar-item.component';
+
 
 const routes: Routes = [
   {
-    path:"inicio",
+    path:'inicio',
     component:InicioComponent
     
   },
   {
-    path:"peliculas",
+    path:'peliculas',
     component:PeliculasComponent
   },
   {
-    path:"series",
+    path:'series',
     component:SeriesComponent
   },
   {
-    path:"ingresar",
+    path:'ingresar',
     component:IngresarComponent
   },
   {
-    path:"**",
-    redirectTo:"inicio"
-  }
+    path:"dashboard",
+    component: DashboardComponent
+  },
+  {
+    path:'agregarItem',
+    component: AgregarItemComponent
+  },
   {
     path:"**",
-    redirectTo:"eliminaritem"
-  }
-  {
-    path:"**",
-    redirectTo:"agregarItem"
+    redirectTo: 'inicio'
   }
 ];
 

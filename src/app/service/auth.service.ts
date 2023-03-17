@@ -5,7 +5,6 @@ import firebase from "firebase/compat/app"
 
     providedIn: "root"
 })
-
 export class AuthService {
 
   constructor(
@@ -31,6 +30,13 @@ export class AuthService {
   }
 
   async register(email: string, contrasena: string) {
+    try {
+      return await this.afauth.createUserWithEmailAndPassword(email, contrasena) ;
+    } catch (error) {
+      console.log('error en el login', error);
+      return null;
+    }
+    
     
   }
 }

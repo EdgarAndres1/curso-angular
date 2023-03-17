@@ -7,10 +7,6 @@ import { MoviesService } from 'src/app/service/movies.service';
   styleUrls: ['./dashboard.component.scss'],
   providers : [MoviesService]
 })
-export class DashboardComponent {
-  constructor (
-  private _moviesService: MoviesService
-
-  )
+export class DashboardComponent {  
 
 }

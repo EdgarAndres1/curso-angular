@@ -13,8 +13,8 @@
 
 .container {
     background: #071329;
-    background: -webkit-linear-gradient(to right, #132544, #091d42);
-    background: linear-gradient(to right,#162e56, #071225 );
+    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
+    background: linear-gradient(to right,#112e60, #091c3e );
     margin-top: 50px;
     border-radius: 25px;
     width: 500px;
@@ -34,6 +34,8 @@
     gap: 16px;
     display: flex;
     margin: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
 }
 .btn-goo {
     background: url(/assets/ingresar\ con\ google.png);
@@ -43,9 +45,11 @@
     color: aliceblue;
     height: 80px;
     margin-left: 45px;
+    text-align: center;
 }
 .btn-ingre {
     font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 5px;
     padding: 16px, 32px, ;
     gap: 8px;
@@ -58,7 +62,7 @@
     height: 45px;
 }
 .btn-regis {
-    font-family: Poppins;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -68,7 +72,8 @@
     width: 250px;
     border-radius: 12px;
     color: aliceblue;
-    margin-left: 55px;
+    text-align: center;
     height: 50px;
+    margin-left: 55px;
 }
 
