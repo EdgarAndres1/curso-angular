@@ -1,9 +1,89 @@
-.container {
-    background-color: brown;
+
+
+.saludo {
+    color: white;
+    margin-left: 42%;
+    font-size: 40px;
 }
-.card-footer {
-    font-size: 200px;
+.dashboard {
+
+    background: #1e3c72;
+    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
+    background: linear-gradient(to right,#2a5298, #081835 );
+    height: 200px;
+    display: flex;
+    
+
+}
+.add {
+    margin: auto;
 }
 .btn-add {
-    font-size: 200px;
+    font-size: 16px;    
+    text-decoration: none;
+    color: aliceblue;    
+    background: #121829;
+    border-radius: 12px;
+    padding: 10px; 
+    
+      
+    
 }
+
+
+.container {
+    
+    background: #1e3c72;
+    background: -webkit-linear-gradient(to right, #2a5298, #091d42);
+    background: linear-gradient(to right,#2a5298, #081835 );
+    height: 250px;
+    
+}
+
+
+.card {
+    display: flex;
+    margin: 50px;
+    padding: 10px;
+    justify-content: center;
+    
+}
+.card-body {
+    height: 150px;
+    width: 30%;
+    font-size: 80px;    
+    text-align: center;
+    background: #121829;
+    margin: 10px;
+    border-radius: 12px;
+   
+}
+.number {
+   justify-content: center;
+   background-color: #121829;
+   opacity: 0.8;
+   border-radius: 5px;
+   color: aliceblue;
+   margin: 10px;
+   font-size: 32px; 
+   height: 60px;  
+
+
+}
+.name {
+color: aliceblue;
+font-size: 30%;
+
+
+}
+.card-footer {
+    height: 150px;
+    width: 30%;
+    font-size: 80px;    
+    text-align: center;
+    background: #121829;
+    margin: 10px;
+    border-radius: 12px;
+   
+}
+

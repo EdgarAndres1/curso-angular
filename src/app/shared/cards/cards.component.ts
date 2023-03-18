@@ -18,7 +18,7 @@ export class CardsComponent {
 
     ngOnInit (): void {
   }
-  addNewItem(value:string){
+  addNewItem(){
     this.newItemEvent.emit(this.id);
   }
 
