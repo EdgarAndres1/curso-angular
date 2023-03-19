@@ -1,13 +1,19 @@
-<h1>Añadir nuevos elementos</h1>
-<button (click)="obtenerPeliculasGuardadas()">Obtener películas</button>
-<section class="wrapperCards">
-    <div class="container">
-        <div class="row">
-            <div class="col-4" *ngFor="let movie of movies_series">
-                <div class="card">
-                    <app-cards (newItemEvent)="addItem($event)" [conBoton]="true" [id]="movie.id" [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+<div class="container">
+    <h1 class="item">Añadir nuevos elementos</h1>
+    <br>
+    <button (click)="obtenerPeliculasGuardadas()">Obtener películas</button>
+    <br>
+    <section class="wrapperCards">
+        <div class="container-cards">
+            <div class="row">
+                <div class="col-4" *ngFor="let movie of movies_series">
+                    <div class="card">
+                        <app-cards (newItemEvent)="addItem($event)" [conBoton]="true" [id]="movie.id" [imagen]="movie.poster_path" [nombre]="movie.title || movie.original_name"></app-cards>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</div>
+
