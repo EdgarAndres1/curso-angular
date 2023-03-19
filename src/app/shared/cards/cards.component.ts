@@ -12,6 +12,7 @@ export class CardsComponent {
   @Input() conBoton : boolean  = false;
   @Input() id : number = 0;
   @Output () newItemEvent = new EventEmitter<number>();
+
   
 
   constructor ()  {}
@@ -20,6 +21,9 @@ export class CardsComponent {
   }
   addNewItem(){
     this.newItemEvent.emit(this.id);
+
+    
   }
+  
 
 }
