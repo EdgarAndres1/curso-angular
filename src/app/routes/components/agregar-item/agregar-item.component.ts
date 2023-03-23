@@ -6,7 +6,8 @@ import { FirestoreService } from '../../../service/firestore.service';
 @Component({
   selector: 'app-agregar-item',
   templateUrl: './agregar-item.component.html',
-  styleUrls: ['./agregar-item.component.scss']
+  styleUrls: ['./agregar-item.component.scss'],
+  providers:[MoviesService, FirestoreService]
 })
 export class AgregarItemComponent {
   movies_series: any[] = []; 
@@ -37,11 +38,10 @@ export class AgregarItemComponent {
   }
 
   async addItem(newItem: number) {
-    // console.log('Pelicula para agregar', newItem);
-    // let peliculaParaAgregar = this.movies_series.find(movie => movie.id == newItem);
-    // console.log('Pelicula encontrada', peliculaParaAgregar);
-
-    // this._firestoreService.create(peliculaParaAgregar);
+     console.log('Pelicula para agregar', newItem);
+     let peliculaParaAgregar = this.movies_series.find(movie => movie.id == newItem);
+     console.log('Pelicula encontrada', peliculaParaAgregar);
+     this._firestoreService.create(peliculaParaAgregar);
     console.log(await this._firestoreService.delete(newItem));
   }
 

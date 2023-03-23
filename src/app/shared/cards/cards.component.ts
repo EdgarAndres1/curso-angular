@@ -12,14 +12,18 @@ export class CardsComponent {
   @Input() conBoton : boolean  = false;
   @Input() id : number = 0;
   @Output () newItemEvent = new EventEmitter<number>();
+
   
 
   constructor ()  {}
 
     ngOnInit (): void {
   }
-  addNewItem(value:string){
+  addNewItem(){
     this.newItemEvent.emit(this.id);
+
+    
   }
+  
 
 }
